@@ -1,11 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'lib-table-element',
-  imports: [],
   templateUrl: './table-element.component.html',
-  styleUrl: './table-element.component.css'
 })
 export class TableElementComponent {
-
+  @Input() row: any;
+  @Input() column!: { key: string; label: string };
 }
